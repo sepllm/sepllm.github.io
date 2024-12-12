@@ -173,7 +173,7 @@
                     <div class="column is-four-fifths">
                         <div class="item">
                             <!-- Your image here -->
-                            <img style="width: 100%;" src="static/images/image.png" alt="metamath" />
+                            <img style="width: 100%;" src="static/images/1.png" alt="metamath" />
                             <h2 class="subtitle">
                                 Figure 1: The loss comparison between vanilla Transformer and <i>SegLLM</i>.
                             </h2>
@@ -184,10 +184,119 @@
         </div>
     </section>
 
-    <div class="columns is-centered">
-        <video src="" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
-        </video>
-    </div>
+    
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop has-text-centered">
+                <h2 class="title is-3">Training-free</h2>
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="item">
+                            <div class="container is-max-desktop">
+                                <div class="columns is-centered">
+                                    <div class="column has-text-centered is-fifths-fifths">
+                                        <!-- <h2 class="title is-3">Comprehensive Results</h2> -->
+                                        <div class="content has-text-justified">
+                            <!-- Your image here -->
+                            <!-- <img style="width: 100%;" src="static/images/image.png" alt="metamath" /> -->
+                            <div class="columns is-centered">
+                            <table>
+                                <tr>
+                                  <th></th>
+                                  <th>GSM8K-CoT</th>
+                                  <th>r.KV(%)</th>
+                                  <th>MMLU</th>
+                                  <th>r.KV(%)</th>         
+                                </tr>
+                                <tr>
+                                  <td>Vanilla</td>
+                                  <td>77.3</td>
+                                  <td>100.0</td>
+                                  <td>65.7</td>
+                                  <td>100.0</td>
+                                </tr>
+                                <tr>
+                                    <td>StrmLLM (n=380)</td>
+                                    <td>71.4</td>
+                                    <td>47.5</td>
+                                    <td>63.4</td>
+                                    <td>52.5</td>
+                                </tr>
+                                <tr>
+                                    <td>StrmLLM (n=256)</td>
+                                    <td>68.6</td>
+                                    <td>26.0</td>
+                                    <td>62.1</td>
+                                    <td>37.7</td>
+                                </tr>
+                                <tr>
+                                    <td>SegLLM (n=256)</td>
+                                    <td>77.2</td>
+                                    <td>47.4</td>
+                                    <td>64.7</td>
+                                    <td>44.6</td>
+                                </tr>
+                              </table>
+                            </div>
+                            </div>
+                            <h2 class="subtitle">
+                                Table 1: Evaluation results and average running time KV cache usage for training-free experiments on GSM8K-CoT 8-shots and MMLU 5-shots.
+                            </h2>
+                            <div class="columns is-centered">
+                                <video src="" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
+                                </video>
+                            </div>
+                            <h2 class="subtitle">
+                                Video 1: The comparison of ppl and runing time between <i>SegLLM</i> and others.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop has-text-centered">
+                <h2 class="title is-3">Training from Scratch</h2>
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img style="width: 100%;" src="static/images/train.png" alt="metamath" />
+                            <h2 class="subtitle">
+                                Figure 2: The loss comparison between vanilla Transformer and <i>SegLLM</i>.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop has-text-centered">
+                <h2 class="title is-3">Post-training</h2>
+                <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                        <div class="item">
+                            <!-- Your image here -->
+                            <img style="width: 60%;" src="static/images/post.png" alt="metamath" />
+                            <h2 class="subtitle">
+                                Figure 3: Training loss curves for the post-training.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- <section class="hero">
         <div class="hero-body">
             <div class="container is-max-desktop">
