@@ -6,7 +6,7 @@
     <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
     <!-- Replace the content tag with appropriate information -->
     <meta name="description" content="DESCRIPTION META TAG">
-    <meta property="og:title" content="SegLLM: Accelerate Large Language Models by Compressing One Segment into One Token" />
+    <meta property="og:title" content="SepLLM: Accelerate Large Language Models by Compressing One Segment into One Separator" />
     <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
     <meta property="og:url" content="URL OF THE WEBSITE" />
     <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>SegLLM</title>
+    <title>SepLLM</title>
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
     <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -54,7 +54,7 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">SegLLM: <br />Accelerate Large Language Models by Compressing One Segment into One Token</h1>
+                        <h1 class="title is-1 publication-title">SepLLM: <br />Accelerate Large Language Models by Compressing One Segment into One Separator</h1>
                         <div class="is-size-5 publication-authors">
                             <!-- Paper authors -->
                             <span class="author-block"><a href="https://.github.io/" target="_blank">Guoxuan
@@ -103,7 +103,7 @@
                             <div class="publication-links">
                                 <!-- Github link -->
                                 <span class="link-block">
-                                    <a href="https://github.com/HKUDS/SegLLM" target="_blank"
+                                    <a href="https://github.com/HKUDS/SepLLM" target="_blank"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
@@ -148,14 +148,14 @@
                             semantically meaningful tokens. This insight has led us to hypothesize that 
                             the information of the segment between these special tokens can be condensed 
                             into these tokens without significant loss of information. Based on this hypothesis, 
-                            we introduce SegLLM, a plug-and-play framework for inference acceleration 
+                            we introduce SepLLM, a plug-and-play framework for inference acceleration 
                             by compressing these segments and dropping redundant tokens. Besides, 
                             we implement efficient kernels for training acceleration. The experimental 
                             results on training-free, training-from-scratch and post-training settings 
-                            substantiate the effectiveness of SegLLM. Notably, SegLLM achieves a remarkable 
+                            substantiate the effectiveness of SepLLM. Notably, SepLLM achieves a remarkable 
                             reduction of over 50\% in KV cache on the GSM8K-CoT benchmark, utilizing the Llama-3-8B backbone, 
                             with negligible compromise in performance. Additionally, in streaming settings, 
-                            SegLLM is capable of delivering consistent and effective language modeling across 
+                            SepLLM is capable of delivering consistent and effective language modeling across 
                             up to 4 million tokens or even more. 
                         </p>
                     </div>
@@ -175,7 +175,7 @@
                             <!-- Your image here -->
                             <img style="width: 80%;" src="static/images/1.png" alt="metamath" />
                             <h2 class="subtitle">
-                                Figure 1:  The training and inference paradigm of <i>SegLLM</i>.
+                                Figure 1:  The training and inference paradigm of <i>SepLLM</i>.
                             </h2>
                         </div>
 
@@ -184,7 +184,7 @@
                             <!-- Your image here -->
                             <img style="width: 100%;" src="static/images/2.png" alt="metamath" />
                             <h2 class="subtitle">
-                                Figure 2: Overall framework of the proposed <i>SegLLM</i> tailored for streaming applications.
+                                Figure 2: Overall framework of the proposed <i>SepLLM</i> tailored for streaming applications.
                             </h2>
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                                     <td>37.7</td>
                                 </tr>
                                 <tr>
-                                    <td>SegLLM (n=256)</td>
+                                    <td>SepLLM (n=256)</td>
                                     <td>77.2</td>
                                     <td>47.4</td>
                                     <td>64.7</td>
@@ -254,11 +254,11 @@
                                 Table 1: Evaluation results and average running time KV cache usage for training-free experiments on GSM8K-CoT 8-shots and MMLU 5-shots.
                             </h2>
                             <div class="columns is-centered">
-                                <video src="https://github.com/segllm/segllm.github.io/releases/download/segllm/1.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
+                                <video src="https://github.com/SepLLM/SepLLM.github.io/releases/download/SepLLM/1.mp4" controls="controls" muted="muted" class="d-block rounded-bottom-2 border-top width-fit" style="max-height:640px; min-height: 200px">
                                 </video>
                             </div>
                             <h2 class="subtitle">
-                                Video 1: The comparison of ppl and runing time between <i>SegLLM</i> and others.
+                                Video 1: The comparison of ppl and runing time between <i>SepLLM</i> and others.
                             </h2>
                         </div>
                     </div>
@@ -277,7 +277,7 @@
                             <!-- Your image here -->
                             <img style="width: 100%;" src="static/images/train.png" alt="metamath" />
                             <h2 class="subtitle">
-                                Figure 3: The loss comparison between vanilla Transformer and <i>SegLLM</i>.
+                                Figure 3: The loss comparison between vanilla Transformer and <i>SepLLM</i>.
                             </h2>
                         </div>
                     </div>
@@ -607,8 +607,8 @@
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
-            <pre><code>@article{chen2024segllm,
-  title={SegLLM: Accelerate Large Language Models by Compressing One Segment into One Token},
+            <pre><code>@article{chen2024SepLLM,
+  title={SepLLM: Accelerate Large Language Models by Compressing One Segment into One Token},
   author={Chen, Guoxuan and Shi, Han and Li, Jiawei and Ren, Xiaozhe and Chen, Yimeng and Jiang, Xin and Li, Zhenguo and Liu, Weiyang and Huang, Chao},
   journal={arXiv preprint arXiv:},
   year={2024}
